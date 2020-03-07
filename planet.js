@@ -18,6 +18,7 @@ class Planet {
             translate(this.transX, this.transY);
             rotate(this.rotation);
             ellipse(this.xPos, this.yPos, this.radius, this.radius);
+            this.rotation += this.increment;
         pop();
     }
 }

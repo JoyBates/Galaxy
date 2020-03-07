@@ -16,6 +16,5 @@ class Moon extends Planet {
 
     display() {
         super.display();
-        print("Moon: " + this.xPos, this.yPos);
     }
 }

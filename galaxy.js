@@ -6,9 +6,6 @@ let stars_height = [];
 let sun = new Sun();
 
 let planets = [];
-let venus = ["100","100","20","100","100","100","0.2"];
-let earth = ["200","200","40","100","100","100","100","0.2"];
-let mars = ["300","300","60","100","100","100","0.2"];
 let moon;
 
 function setup() {
@@ -24,13 +21,9 @@ function draw() {
     static();
     for (let i = 0; i < planets.length; i++) {
         planets[i].display();
-        // planets[i].rotation += planets[i].increment;
     }
     moon.display();
-    moon.rotation += moon.increment;
 
-    print("Earth: " + planets[1].xPos, planets[1].yPos);
-    print("Sun: " + sun.xPos, sun.yPos);
 }
 
 //==============================================
@@ -44,15 +37,17 @@ function initStars() {
 }
 
 function initPlanetsAndMoon() {
-    planets.push(new Planet(venus)); // Venus
-    planets.push(new Planet(200,200,40,100,100,100,100,0.2)); // Earth
-    planets.push(new Planet(mars)); // Mars
-    planets.push(new Planet(100*4,100*4,20*4,100,100,100,0.2)); // Reef
-    moon = new Moon(1,50,50,50,.2);
+    planets.push(new Planet(100,100,20,100,100,100,0.5)); // Mercury
+    planets.push(new Planet(175,100,45,100,100,100,0.4)); // Venus
+    planets.push(new Planet(300,100,60,100,100,100,0.2)); // Earth
+    planets.push(new Planet(600,100,44,100,100,100,0.1)); // Mars
+    planets.push(new Planet(900,100,150,100,100,100,0.07)); // Jupiter
+    moon = new Moon(2,50,50,50,.2);
 }
 
 function static() {
     background(26, 0, 26); // dark purple
+    noStroke();
     fill(217, 217, 217); // light gray
     for (let i = 0; i < 100; i++) {
         ellipse(stars_xPos[i], stars_yPos[i], stars_width[i], stars_height[i]);
