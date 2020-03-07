@@ -10,25 +10,18 @@ class Moon extends Planet {
         this.blue = blue;
         this.rotation = 0;
         this.increment = planets[this.planet].increment;
-        this.rot = rot;
+        this.rot = planets[this.planet].rotation;
         this.inc = rot;
-        // this.transX = sun.xPos;// + planets[this.planet].xPos;
-        // this.transY = sun.yPos;// + planets[this.planet].yPos;
+        this.X = sun.xPos + planets[this.planet].xPos;// + planets[this.planet].radius;
+        this.Y = sun.yPos + planets[this.planet].yPos;
     }
 
     display() {
-        super.display();
-        rotate();
-        print("Moon: " + this.xPos, this.yPos);
-    }
-
-    rotate() {
         push();
-            this.xPos = (this.xPos + planets[this.planet].xPos) * cos(this.rot);
-            this.yPos = (this.yPos + planets[this.planet].yPos) * sin(this.rot);
+            translate(planets[this.planet].radius * cos(this.rot), planets[this.planet].radius * sin(this.rot));
+                super.display();
         pop();
         this.rot += this.inc;
-
         print("Moon: " + this.xPos, this.yPos);
     }
 }
