@@ -8,6 +8,7 @@ let planets = [];
 let moon;
 let asteroids = [];
 let meteors = [];
+let paw;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -31,6 +32,7 @@ function draw() {
         meteors[i].display();
         // print("Meteor " + i + " is at " + meteors[i].xPos, meteors[i].yPos + " which is " + meteors[i].isOutOfWindow);
     }
+    paw.display();
 }
 
 //==============================================
@@ -56,6 +58,7 @@ function initClasses() {
     for (let i = 0; i < 15; i++) {
         meteors.push(new Meteor());
     }
+    paw = new Paw();
 }
 
 function static() {
