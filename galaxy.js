@@ -29,7 +29,7 @@ function draw() {
     }
     for (let i = 0; i < meteors.length; i++) {
         meteors[i].display();
-        print(meteors[i].xPos, meteors[i].yPos);
+        print("Meteor " + i + " is at " + meteors[i].xPos, meteors[i].yPos + " which is " + meteors[i].isOutOfWindow);
     }
 }
 
