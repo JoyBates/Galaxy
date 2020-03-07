@@ -42,7 +42,7 @@ function initPlanetsAndMoon() {
     planets.push(new Planet(300,100,60,100,100,100,0.2)); // Earth
     planets.push(new Planet(600,100,44,100,100,100,0.1)); // Mars
     planets.push(new Planet(900,100,150,100,100,100,0.07)); // Jupiter
-    moon = new Moon(2,50,50,50,.2);
+    moon = new Moon(2,50,50,50,0.2);
 }
 
 function static() {
