@@ -4,11 +4,12 @@ let stars_width = [];
 let stars_height = [];
 
 let sun = new Sun();
+let paw;
+let eyes;
 let planets = [];
 let moon;
 let asteroids = [];
 let meteors = [];
-let paw;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -33,6 +34,7 @@ function draw() {
         // print("Meteor " + i + " is at " + meteors[i].xPos, meteors[i].yPos + " which is " + meteors[i].isOutOfWindow);
     }
     paw.display();
+    eyes.blink();
 }
 
 //==============================================
@@ -59,6 +61,7 @@ function initClasses() {
         meteors.push(new Meteor());
     }
     paw = new Paw();
+    eyes = new Eyes();
 }
 
 function static() {
@@ -69,4 +72,5 @@ function static() {
         ellipse(stars_xPos[i], stars_yPos[i], stars_width[i], stars_height[i]);
     }
     sun.display();
+    eyes.display();
 }
