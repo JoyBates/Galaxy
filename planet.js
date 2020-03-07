@@ -6,7 +6,7 @@ class Planet {
         this.red = red;
         this.green = green;
         this.blue = blue;
-        this.rotation = rotation;
+        this.rotation = 0;
         this.increment = rotation;
         this.transX = sun.xPos;
         this.transY = sun.yPos;

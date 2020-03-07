@@ -20,14 +20,17 @@ function setup() {
 }
 
 function draw() {
-    // print(mouseX, mouseY);
+    print("Mouse: " + mouseX, mouseY);
     static();
     for (let i = 0; i < planets.length; i++) {
         planets[i].display();
-        planets[i].rotation += planets[i].increment;
+        // planets[i].rotation += planets[i].increment;
     }
     moon.display();
     moon.rotation += moon.increment;
+
+    print("Earth: " + planets[1].xPos, planets[1].yPos);
+    print("Sun: " + sun.xPos, sun.yPos);
 }
 
 //==============================================
@@ -45,7 +48,7 @@ function initPlanetsAndMoon() {
     planets.push(new Planet(200,200,40,100,100,100,100,0.2)); // Earth
     planets.push(new Planet(mars)); // Mars
     planets.push(new Planet(100*4,100*4,20*4,100,100,100,0.2)); // Reef
-    moon = new Moon(1,50,50,50,0.2);
+    moon = new Moon(1,50,50,50,.2);
 }
 
 function static() {
