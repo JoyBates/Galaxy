@@ -13,7 +13,7 @@ let moon;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
-    frameRate(10);
+    frameRate(10); //10
 
     initStars();
     initPlanetsAndMoon();
@@ -27,6 +27,7 @@ function draw() {
         planets[i].rotation += planets[i].increment;
     }
     moon.display();
+    moon.rotation += moon.increment;
 }
 
 //==============================================
@@ -49,9 +50,9 @@ function initPlanetsAndMoon() {
 
 function static() {
     background(26, 0, 26); // dark purple
-    sun.display();
     fill(217, 217, 217); // light gray
     for (let i = 0; i < 100; i++) {
         ellipse(stars_xPos[i], stars_yPos[i], stars_width[i], stars_height[i]);
     }
+    sun.display();
 }

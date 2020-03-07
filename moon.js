@@ -1,5 +1,6 @@
 class Moon extends Planet {
     constructor(planet, red, green, blue, rotation) {
+        super();
         this.planet = planet;
         this.xPos = planets[this.planet].xPos;
         this.yPos = planets[this.planet].yPos;
@@ -8,6 +9,7 @@ class Moon extends Planet {
         this.green = green;
         this.blue = blue;
         this.rotation = rotation;
+        this.increment = rotation;
         this.transX = planets[this.planet].xPos;
         this.transY = planets[this.planet].yPos;
     }
