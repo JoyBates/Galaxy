@@ -1,0 +1,10 @@
+class Paw {
+    constructor() {
+
+    }
+
+    display() {
+        
+    }
+
+}

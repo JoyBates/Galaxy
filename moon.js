@@ -8,6 +8,7 @@ class Moon extends Planet {
         this.red = red;
         this.green = green;
         this.blue = blue;
+        this.color = (this.red, this.blue, this.green);
         this.rotation = 0;
         this.increment = planets[this.planet].increment;
         this.rot = planets[this.planet].rotation;

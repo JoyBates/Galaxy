@@ -6,6 +6,7 @@ class Planet {
         this.red = red;
         this.green = green;
         this.blue = blue;
+        this.color = color(red, green, blue);
         this.rotation = 0;
         this.increment = rotation;
         this.transX = sun.xPos;
@@ -13,7 +14,12 @@ class Planet {
     }
 
     display() {
-        fill(this.red, this.green, this.blue);
+        if (this.green == 1 && this.blue == 1) {
+            fill(this.red, this.red, this.red);
+        }
+        else {
+            fill(this.color);
+        }
         push();
             translate(this.transX, this.transY);
             rotate(this.rotation);

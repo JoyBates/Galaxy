@@ -29,7 +29,7 @@ function draw() {
     }
     for (let i = 0; i < meteors.length; i++) {
         meteors[i].display();
-        print("Meteor " + i + " is at " + meteors[i].xPos, meteors[i].yPos + " which is " + meteors[i].isOutOfWindow);
+        // print("Meteor " + i + " is at " + meteors[i].xPos, meteors[i].yPos + " which is " + meteors[i].isOutOfWindow);
     }
 }
 
@@ -44,14 +44,14 @@ function initStars() {
 }
 
 function initClasses() {
-    planets.push(new Planet(100,100,20,100,100,100,0.5)); // Mercury
-    planets.push(new Planet(175,100,45,100,100,100,0.4)); // Venus
-    planets.push(new Planet(300,100,60,100,100,100,0.2)); // Earth
-    planets.push(new Planet(500,100,44,100,100,100,0.1)); // Mars
-    planets.push(new Planet(900,100,150,100,100,100,0.07)); // Jupiter
-    moon = new Moon(2,50,50,50,0.2);
+    planets.push(new Planet(100,100,20,230,0,0,0.5)); // Mercury
+    planets.push(new Planet(175,100,45,0,179,89,0.4)); // Venus
+    planets.push(new Planet(300,100,60,0,45,179,0.2)); // Earth
+    planets.push(new Planet(500,100,44,230,0,0,0.1)); // Mars
+    planets.push(new Planet(900,100,150,255,204,102,0.07)); // Jupiter
+    moon = new Moon(2,230,230,230,0.4);
     for (let i = 0; i < 100; i++) {
-        asteroids.push(new Planet(random(635, 665),100,random(2,15),80,80,80,random(0.1,0.3)));
+        asteroids.push(new Planet(random(635, 665),100,random(2,15),random(51,140),1,1,random(0.1,0.3)));
     }
     for (let i = 0; i < 15; i++) {
         meteors.push(new Meteor());
